@@ -22,10 +22,15 @@ export class TaskDto {
     @IsOptional()
     status:string;
     @IsDateString()
-    expitarionDate:Date;
+    expirationDate:Date;
 }
 
 export interface FindAllParameters {
     title:string;
     status:string;
+}
+
+export class TaskRouteParameters {
+    @IsUUID()
+    id:string;
 }
